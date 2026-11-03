@@ -28,6 +28,8 @@ jobs:
       - name: Export command catalog
         run: python3 client/server/export_catalog.py
       - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: client/web/package.json
       - uses: actions/setup-node@v4
         with:
           node-version: 22
